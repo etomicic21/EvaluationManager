@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvStudents = new System.Windows.Forms.DataGridView();
+            this.btnEvaluateStudent = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,14 +43,25 @@
             this.dgvStudents.RowHeadersWidth = 51;
             this.dgvStudents.RowTemplate.Height = 24;
             this.dgvStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStudents.Size = new System.Drawing.Size(776, 426);
+            this.dgvStudents.Size = new System.Drawing.Size(776, 360);
             this.dgvStudents.TabIndex = 0;
+            // 
+            // btnEvaluateStudent
+            // 
+            this.btnEvaluateStudent.Location = new System.Drawing.Point(592, 390);
+            this.btnEvaluateStudent.Name = "btnEvaluateStudent";
+            this.btnEvaluateStudent.Size = new System.Drawing.Size(196, 36);
+            this.btnEvaluateStudent.TabIndex = 1;
+            this.btnEvaluateStudent.Text = "Evaluiraj studenta";
+            this.btnEvaluateStudent.UseVisualStyleBackColor = true;
+            this.btnEvaluateStudent.Click += new System.EventHandler(this.btnEvaluateStudent_Click);
             // 
             // FrmStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 441);
+            this.Controls.Add(this.btnEvaluateStudent);
             this.Controls.Add(this.dgvStudents);
             this.Name = "FrmStudents";
             this.Text = "FrmStudents";
@@ -62,5 +74,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvStudents;
+        private System.Windows.Forms.Button btnEvaluateStudent;
     }
 }
