@@ -14,7 +14,7 @@ namespace EvaluationManager.Repositories
         public static Evaluation GetEvaluation(Student student, Activity activity)
         {
             Evaluation evaluation = null;
-            string sql = $"SELECT * FROM Evaluations WHERE IdStudents = {student.Id} AND IdActivities = { activity.Id}";
+            string sql = $"SELECT * FROM Evaluations WHERE IdStudents = {student.Id} AND IdActivities = {activity.Id}";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             if (reader.HasRows)
