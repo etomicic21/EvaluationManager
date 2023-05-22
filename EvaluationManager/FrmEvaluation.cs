@@ -14,14 +14,12 @@ namespace EvaluationManager
 {
     public partial class FrmEvaluation : Form
     {
-        private Student student;
-
         public Student SelectedStudent { get; private set; }
 
         public FrmEvaluation(Models.Student selectedStudent)
         {
             InitializeComponent();
-            student = selectedStudent;
+            SelectedStudent = selectedStudent;
         }
 
         private void FrmEvaluation_Load(object sender, EventArgs e)
@@ -32,7 +30,7 @@ namespace EvaluationManager
         }
         private void SetFormText()
         {
-            Text = student.FirstName + " " + student.LastName;
+            Text = SelectedStudent.FirstName + " " + SelectedStudent.LastName;
         }
 
         private void cboActivities_SelectedIndexChanged(object sender, EventArgs e)
