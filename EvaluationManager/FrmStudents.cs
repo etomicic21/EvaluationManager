@@ -43,5 +43,11 @@ namespace EvaluationManager
             }
 
         }
+
+        private void btnShowReport_Click(object sender, EventArgs e) {
+            FrmStudentReportView frm = new FrmStudentReportView();
+            frm.ShowDialog();
+
+        }
     }
 }
